@@ -1,0 +1,4 @@
+read -sv build/artifacts/netlist/GoBoardTop.v
+hierarchy -top GoBoardTop
+proc; opt; techmap; opt
+synth_ice40 -top GoBoardTop -json build/artifacts/syn/synth.json
